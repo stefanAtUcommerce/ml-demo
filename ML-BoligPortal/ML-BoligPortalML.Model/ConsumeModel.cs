@@ -2,6 +2,7 @@
 
 using Microsoft.ML;
 using System;
+using System.IO;
 
 namespace ML_BoligPortalML.Model
 {
@@ -23,7 +24,7 @@ namespace ML_BoligPortalML.Model
             var mlContext = new MLContext();
 
             // Load model & create prediction engine
-            var modelPath = @"C:\Users\stefa\AppData\Local\Temp\MLVSTools\ML-BoligPortalML\ML-BoligPortalML.Model\MLModel.zip";
+            var modelPath = Directory.GetCurrentDirectory() + "../../../../../ML-BoligPortalML.Model/MLModel.zip";
             ITransformer mlModel = mlContext.Model.Load(modelPath, out _);
             var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 

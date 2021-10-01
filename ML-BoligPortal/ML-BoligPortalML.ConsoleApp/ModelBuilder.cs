@@ -12,8 +12,8 @@ namespace ML_BoligPortalML.ConsoleApp
 {
     public static class ModelBuilder
     {
-        private static string TRAIN_DATA_FILEPATH = @"C:\Users\stefa\source\repos\ML-BoligPortal\ML-BoligPortal\bolig-portal-data-2021-09-27.csv";
-        private static string MODEL_FILEPATH = @"C:\Users\stefa\AppData\Local\Temp\MLVSTools\ML-BoligPortalML\ML-BoligPortalML.Model\MLModel.zip";
+        private static string TRAIN_DATA_FILEPATH = Directory.GetCurrentDirectory() + "../../../../../ML-BoligPortal/bolig-portal-data-2021-09-27.csv";
+        private static string MODEL_FILEPATH = Directory.GetCurrentDirectory() + "../../../../../ML-BoligPortalML.Model/MLModel.zip";
         // Create MLContext to be shared across the model creation workflow objects 
         // Set a random seed for repeatable/deterministic results across multiple trainings.
         private static MLContext mlContext = new MLContext(seed: 1);

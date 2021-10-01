@@ -16,13 +16,13 @@ namespace ML_BoligPortalML.ConsoleApp
                 new ModelInput
                 {
                     PropertyType = @"Apartment",
-                    Rooms = 2F,
+                    Rooms = 3F,
                     Furnished = false,
                     Elevator = true,
-                    Parking = false,
-                    Size = 61F,
-                    Floor = 2,
-                    District = "I. Christensens Gade, 8220 Aarhus"
+                    Parking = true,
+                    Size = 97F,
+                    Floor = 3,
+                    District = "Robert Jacobsens Vej, 2300 København"
                 }
             };
 
